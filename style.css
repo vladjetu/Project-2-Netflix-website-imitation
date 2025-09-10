@@ -1,0 +1,350 @@
+:root {
+  --text-white: #fff;
+  --text-grey: #b3b3b3;
+  --bg-red: rgb(214, 28, 28);
+  --bg-black: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  font-family: "Lora", serif;
+  background-color: var(--bg-black);
+}
+
+header {
+  background-color: var(--bg-black);
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  padding: 5px 10px;
+}
+
+.header-registration {
+  padding: 5px 10px;
+}
+
+.header-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--bg-red);
+  color: var(--text-white);
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.3333px;
+  transition: opacity 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url(./img/background.jpg);
+  background-color: var(--bg-black);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -1px;
+}
+
+.hero-wrapper {
+  margin: 0 auto;
+  height: calc(70vh - 60px);
+  position: relative;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-texts {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hero-wrapper p {
+  text-align: center;
+}
+
+.hero-emailing,
+.registration-form {
+  width: 80%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.registration-form {
+  margin: 60px auto;
+}
+
+.hero-emailing input,
+.registration-form input {
+  background-color: transparent;
+  height: 40px;
+  border: 2px solid var(--text-grey);
+  border-radius: 4px;
+  color: var(--text-grey);
+  padding: 5px;
+}
+
+.hero-emailing button,
+.registration-form button {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+  background-color: var(--bg-red);
+  color: var(--text-white);
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  transition: opacity 0.1s;
+}
+
+.hero-emailing button:hover,
+.registration-form button:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .hero-texts {
+    max-width: 600px;
+  }
+
+  .hero-emailing {
+    max-width: 500px;
+    flex-direction: row;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  .hero-emailing input {
+    flex-basis: 75%;
+  }
+  .hero-emailing button {
+    flex-basis: 25%;
+  }
+}
+
+.top-movies {
+  background-color: var(--bg-black);
+  text-align: center;
+}
+
+.top-movies-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.top-movie {
+  flex: 1 1 200px;
+  max-width: 240px;
+  aspect-ratio: 2/3;
+  transition: transform 0.2s;
+}
+
+.top-movie:hover {
+  transform: scale(1.1);
+}
+
+.top-movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-movies .btn {
+  margin: 20px auto 100px auto;
+}
+
+@media (min-width: 768px) {
+  .top-movies-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.footer-wrapper {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+  min-width: 210px;
+}
+
+.footer-item a {
+  color: var(--text-grey);
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .footer-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/*  Styly jen ke stránce movies.html */
+.movies-button {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.movies-options {
+  text-align: center;
+}
+
+.movies-options select {
+  background-color: var(--bg-black);
+  height: 40px;
+  width: 120px;
+  border: 2px solid var(--bg-red);
+  border-radius: 4px;
+  color: var(--text-white);
+  padding: 5px;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.movies-options select:hover {
+  box-shadow: 0 0 5px 1px var(--bg-red);
+}
+
+.movies-options select:focus {
+  outline: none;
+  border-color: var(--bg-red);
+  box-shadow: 0 0 5px 1px var(--bg-red);
+}
+
+.movies-container {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.movie {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 4px;
+  transform: rotate(5deg);
+  transition: transform 0.2s ease;
+}
+
+.movie img:hover {
+  transform: rotate(0deg);
+}
+
+/* Šipka, která tě vrátí zpět nahoru v index.html  */
+.arrow-up {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2.5rem;
+  color: var(--bg-red);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.1s;
+  display: none;
+}
+
+.arrow-up:hover {
+  opacity: 0.8;
+}
+
+.show-arrow-up {
+  display: block;
+}
+
+/* Třídy pro ověření shody hesla v registračním formuláři form.html */
+.registration-form input.correct-pass {
+  border: 3px solid green;
+}
+
+.registration-form input.incorrect-pass {
+  border: 3px solid red;
+}
